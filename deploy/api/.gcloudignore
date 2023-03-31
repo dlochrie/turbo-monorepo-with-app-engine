@@ -1,0 +1,7 @@
+# Since our deploy script ONLY uploads what we specify, we don't need a lot of ignore rules.
+
+# The actual deploy script.
+deploy.sh
+
+# Exclude dependencies
+node_modules/

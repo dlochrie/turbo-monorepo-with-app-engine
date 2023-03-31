@@ -1,0 +1,10 @@
+# Dependencies.
+node_modules
+
+# Build targets
+.deploy
+
+# Ignore files copied by build script.
+package.json
+package-lock.json
+apps/

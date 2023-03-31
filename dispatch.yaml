@@ -1,0 +1,26 @@
+# Routing Rules for all our App Engine services.
+# See: https://cloud.google.com/appengine/docs/standard/nodejs/how-requests-are-routed#dispatch
+#
+# Using a dispatch.yaml config will let us create and mount other App Engine services in
+# subdirectories.
+#
+# For example:
+#
+# - www.mysite.com      <- This will serve the "default" service (App Engine requires a "default").
+# - www.mysite.com/api  <- This will serve the "api" service ("api" defined in "app/app.yaml").
+# - www.mysite.com/blog <- You can even mount a blog (or forum) on the website.
+#
+# Note: The `dispatch.yaml` file needs to be deployed just like the `app.yaml` files.
+#
+# You can go back to traditional routing by following this doc:
+#
+#   https://cloud.google.com/appengine/docs/standard/nodejs/reference/dispatch-yaml
+#
+dispatch:
+  # Send API traffic to the "api" service.
+  - url: "*/api/*"
+    service: api
+
+  # Send all non-specified traffice to the website.
+  - url: "*/.*"
+    service: default

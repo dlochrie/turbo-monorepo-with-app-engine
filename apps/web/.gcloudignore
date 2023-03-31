@@ -1,0 +1,16 @@
+# Exclude source files.
+pages/
+src/
+
+# Exclude dependencies
+node_modules/
+
+# Build artifacts
+.next/
+.turbo/
+
+# Misc
+README.md
+
+
+#tsconfig.json

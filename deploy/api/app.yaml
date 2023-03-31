@@ -1,0 +1,5 @@
+# Namespace each service ("api", "web", "etc").
+service: api
+
+# Set the runtime (for App Engine Standard Env).
+runtime: nodejs18

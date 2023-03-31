@@ -1,0 +1,11 @@
+service: admin
+
+# Default "Standard" GAE Environment.
+runtime: nodejs18
+
+# Next.js
+# Forward all requests to Next.js, and force HTTPS.
+handlers:
+  - url: /.*
+    secure: always
+    script: auto

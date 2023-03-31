@@ -1,0 +1,24 @@
+{
+  "name": "turbo-monorepo-with-app-engine",
+  "version": "0.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "deploy:web": "cd deploy/web && ./deploy.sh",
+    "deploy:admin": "cd deploy/admin && ./deploy.sh",
+    "deploy:api": "cd deploy/api && ./deploy.sh"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "packageManager": "npm@9.5.0"
+}

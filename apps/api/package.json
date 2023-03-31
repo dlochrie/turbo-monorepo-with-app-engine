@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=build/index.js  --packages=external",
+    "start": "node build/index.js",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "common": "*"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "esbuild": "^0.17.14",
+    "tsconfig": "*",
+    "tsx": "^3.12.6",
+    "typescript": "^5.0.2"
+  }
+}
